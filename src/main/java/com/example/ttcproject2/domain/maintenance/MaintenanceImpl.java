@@ -7,6 +7,7 @@ public class MaintenanceImpl implements Maintenance {
     private int facilityID;
     private String details;
     private int cost;
+    private MaintOrderImpl order;
 
     private Facility facility;
 ;
