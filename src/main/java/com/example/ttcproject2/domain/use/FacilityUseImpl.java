@@ -7,8 +7,7 @@ public class FacilityUseImpl implements FacilityUse {
     //private int useID;
     private int facilityID;
     private int roomNumber;
-    private LocalDate startDate;
-    private LocalDate endDate;
+    private UseScheduleImpl schedule;
 
     private Facility facility;
 
@@ -22,12 +21,11 @@ public class FacilityUseImpl implements FacilityUse {
         return roomNumber;
     }
     public LocalDate getStartDate() {
-        return startDate;
+        return schedule.getStartDate();
     }
     public LocalDate getEndDate() {
-        return endDate;
+        return schedule.getEndDate();
     }
-
     public Facility getFacility() {
         return facility;
     }
@@ -42,14 +40,6 @@ public class FacilityUseImpl implements FacilityUse {
 
     public void setRoomNumber(int roomNumber) {
         this.roomNumber = roomNumber;
-    }
-
-    public void setStartDate(LocalDate startDate) {
-        this.startDate = startDate;
-    }
-
-    public void setEndDate(LocalDate endDate) {
-        this.endDate = endDate;
     }
 
     public void setFacility(Facility facility) {
